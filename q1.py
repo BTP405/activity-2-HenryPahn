@@ -13,11 +13,6 @@ def checkPrimeNumber(n):
     return True
 
 def getPrimeNumbers(n):
-    res = []
-    # loop through the range from 2 to n
-    for i in range(2, n):
-        if(checkPrimeNumber(i)):
-            res.append(i)
-    return res
+    return [i for i in range(2, n) if checkPrimeNumber(i)]
 
 print(getPrimeNumbers(20))
