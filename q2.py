@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 # this function counts number of integers exists in the range
 def count(arr, start, end):
@@ -28,7 +29,8 @@ def graphSnowfall(t):
     # add text to the graph
     for index, value in enumerate(y):
         plt.text(value, index, str(value))
-        
+    plt.xticks(np.arange(0, 4, step=1))
+
     # save the graph image 
     plt.savefig("q2.png")
 
